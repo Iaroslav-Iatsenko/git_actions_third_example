@@ -1,8 +1,8 @@
-name: Deploy Project
+name: Handle issues
 on: [issues, workflow_dispatch]
 jobs:
   info:
     runs-on: ubuntu-latest
     steps:
-      - name: Output Github context
-        run: echo "${{ toJson(github) }}"
+      - name: Output event details
+        run: echo "${{ toJson(github.event) }}"
